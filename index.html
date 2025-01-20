@@ -13,13 +13,13 @@
         }
 
         body {
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;
+            background-color: #fff;
         }
 
         section {
             padding: 3rem;
-            margin: 0 auto;
+            width: 100%;
         }
 
         h1 {
@@ -48,6 +48,11 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
+        .single-image {
+            max-width: 400px;
+            height: auto;
+        }
+
         .birthday-section {
             background-color: #fff;
             text-align: center;
@@ -63,15 +68,25 @@
             display: flex;
             gap: 2rem;
             align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .flex-left, .flex-right {
             display: flex;
             gap: 2rem;
             align-items: center;
+            justify-content: center;
             padding: 2rem;
-            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-content {
+            flex: 1;
+            min-width: 300px;
         }
 
         .photo-grid {
@@ -87,40 +102,37 @@
             object-fit: cover;
         }
 
-        /* Alternating section colors */
+        /* Pastel pink alternating section colors */
+        section:nth-of-type(1) {
+            background-color: #fff0f5;
+        }
+
         section:nth-of-type(2) {
-            background-color: #f8f1ff;
+            background-color: #ffe4e8;
         }
 
         section:nth-of-type(3) {
-            background-color: #fff5f5;
+            background-color: #ffdee4;
         }
 
         section:nth-of-type(4) {
-            background-color: #f0f7ff;
+            background-color: #ffd4dc;
         }
 
         section:nth-of-type(5) {
-            background-color: #fff8f0;
+            background-color: #ffcad4;
         }
 
         section:nth-of-type(6) {
-            background-color: #f5fff5;
+            background-color: #ffc0cb;
         }
 
         section:nth-of-type(7) {
-            background-color: #fff0f7;
+            background-color: #ffb6c1;
         }
 
         section:nth-of-type(8) {
-            background-color: #f0ffff;
-        }
-
-        .custom-background {
-            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
-                        url('background-image.jpg');
-            background-size: cover;
-            background-attachment: fixed;
+            background-color: #ffa6b5;
         }
 
         @media (max-width: 768px) {
@@ -135,6 +147,10 @@
 
             .photo-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .single-image {
+                margin: 1rem auto;
             }
 
             h1 {
@@ -158,23 +174,25 @@
             <h1>Happy Birthday, Bestie!</h1>
             <p>My dearest Sara, Happy 23rd birthday! Today, I want to express how truly grateful I am to have you in my life. Every day with you feels like a celebration, but on this special day, I want to shower you with all the love and affection you deserve. You bring so much joy into my life, and I am forever grateful for the love and happiness you have brought into my world. As you embark on this new chapter, I promise to always cherish and support you in every way possible. May this birthday be the beginning of a year filled with endless love, laughter, and unforgettable memories. Happy birthday, my sweetest saru! With all my love, Arav!</p>
         </div>
-        <img src="images/470923800_578744115010668_3518685348236185401_n.jpg" alt="Birthday Image">
+        <img src="images/470923800_578744115010668_3518685348236185401_n.jpg" alt="Birthday Image" class="single-image">
     </section>
 
     <!-- Our Journey Section -->
-    <section class="background-image custom-background">
-        <div>
-            <h1>Our Journey</h1>
-            <p>Our journey started from the home science class, you found a helpless Arav trying to make a group for a subject that he had no interest in and yet you helped me throughout the year with the subject. After school we never talked frequently and slowly after a couple of years of not hearing from each other we started talking more often and by the end of 2023 you were the most important person in my life. And now its 2025 after all those years of a lot of ups and downs you still remain the most important person in my life.</p>
+    <section>
+        <div class="flex-row">
+            <div class="text-content">
+                <h1>Our Journey</h1>
+                <p>Our journey started from the home science class, you found a helpless Arav trying to make a group for a subject that he had no interest in and yet you helped me throughout the year with the subject. After school we never talked frequently and slowly after a couple of years of not hearing from each other we started talking more often and by the end of 2023 you were the most important person in my life. And now its 2025 after all those years of a lot of ups and downs you still remain the most important person in my life.</p>
+            </div>
+            <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_8f8a4625.jpg" alt="Our Journey" class="single-image">
         </div>
-        <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_8f8a4625.jpg" alt="Our Journey">
     </section>
 
     <!-- First Meeting Section -->
-    <section class="colored-section">
-        <div class="flex-left">
-            <img src="images/WhatsApp Image 2025-01-20 at 14.07.31_4b70ec14.jpg" alt="First Meeting">
-            <div>
+    <section>
+        <div class="flex-row">
+            <img src="images/WhatsApp Image 2025-01-20 at 14.07.31_4b70ec14.jpg" alt="First Meeting" class="single-image">
+            <div class="text-content">
                 <h2>Remember Where We First Met?</h2>
                 <p>First time I noticed you was when you came running down to me to get a bite of food I got from canteen. With that same cheerful and bubbly smile you poked a fork right into my food and I gladly let you not knowing what was going on. Maybe it was the red hair baddie that I was just focused on lol.</p>
             </div>
@@ -182,21 +200,23 @@
     </section>
 
     <!-- First Time Outside School -->
-    <section class="colored-section">
-        <h2>First Time We Met Outside School</h2>
+    <section>
         <div class="flex-row">
-            <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_b50b0cf2.jpg" alt="First Time Outside 1">
-            <div>
+            <div class="text-content">
+                <h2>First Time We Met Outside School</h2>
                 <p>After ages of talking and endless video calls our schedules finally lined up and we met in the freezing cold of Delhi on 2nd January 2024. Seeing you irl in your pink jacket and hearing your laugh for the first time was magical. Food was pretty mid but the little time I spent with you was the best I had felt in ages. From getting you icecream, sending our pics to my mom, telling the cab driver the wrong address by mistake, getting entry into IIT, gossip about school and tons more everything about that day was good but you just made it better.</p>
             </div>
-            <img src="images/WhatsApp Image 2025-01-20 at 05.59.36_504816e2.jpg" alt="First Time Outside 2">
+            <div class="flex-row" style="gap: 1rem;">
+                <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_b50b0cf2.jpg" alt="First Time Outside 1" class="single-image" style="max-width: 300px;">
+                <img src="images/WhatsApp Image 2025-01-20 at 05.59.36_504816e2.jpg" alt="First Time Outside 2" class="single-image" style="max-width: 300px;">
+            </div>
         </div>
     </section>
 
     <!-- Memorable Moments Section -->
-    <section class="colored-section">
-        <div class="flex-right">
-            <div>
+    <section>
+        <div class="flex-row">
+            <div class="text-content">
                 <h2>Memorable Moments</h2>
                 <p>Major part of our relationship has been spent living away from each other, but that never stopped us from being there for each other ever. Now as you turn 23 into an oldie dont forget to keep calling me *i know old age has affects on memory so just reminding you :D</p>
             </div>
@@ -210,15 +230,15 @@
     </section>
 
     <!-- Adventures Together Section -->
-    <section class="colored-section">
-        <div class="flex-left">
+    <section>
+        <div class="flex-row">
             <div class="photo-grid">
                 <img src="images/WhatsApp Image 2025-01-20 at 05.42.28_dcd7678f.jpg" alt="Adventure 1">
                 <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_33baabe4.jpg" alt="Adventure 2">
                 <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_f51bef4b.jpg" alt="Adventure 3">
                 <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_144a9afa.jpg" alt="Adventure 4">
             </div>
-            <div>
+            <div class="text-content">
                 <h2>Adventures Together</h2>
                 <p>Pondi'24, you know how much this trip meant to me. I think I have spoken enough about it previously so without wasting time on your special day I hope i get to experience tons more trips with you.</p>
             </div>
@@ -226,22 +246,24 @@
     </section>
 
     <!-- Why You're Amazing Section -->
-    <section class="colored-section why-amazing">
-        <div>
-            <h2>Why You're Amazing</h2>
-            <p>From the moment we met, Ive been in awe of how truly amazing you are. Your kindness radiates in everything you do, whether it's the way you lend a listening ear to a friend in need or how you light up a room with your laughter. I admire your passion for life and the dedication you show in pursuing your dreams, inspiring me to chase my own with the same josh. The little things you do—like your thoughtful texts/calls and the way you always know how to make me smile—remind me every day of how lucky I am to have you by my side. You are not just another friend; you are my bestesttestttttttt friend, my confidante, and my greatest supporter. I can't wait to see what the future holds for us, but I know that with you, it will be nothing short of extraordinary.</p>
+    <section>
+        <div class="flex-row">
+            <div class="text-content">
+                <h2>Why You're Amazing</h2>
+                <p>From the moment we met, Ive been in awe of how truly amazing you are. Your kindness radiates in everything you do, whether it's the way you lend a listening ear to a friend in need or how you light up a room with your laughter. I admire your passion for life and the dedication you show in pursuing your dreams, inspiring me to chase my own with the same josh. The little things you do—like your thoughtful texts/calls and the way you always know how to make me smile—remind me every day of how lucky I am to have you by my side. You are not just another friend; you are my bestesttestttttttt friend, my confidante, and my greatest supporter. I can't wait to see what the future holds for us, but I know that with you, it will be nothing short of extraordinary.</p>
+            </div>
+            <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_34f38e93.jpg" alt="Why You're Amazing" class="single-image">
         </div>
-        <img src="images/WhatsApp Image 2025-01-20 at 05.42.29_34f38e93.jpg" alt="Why You're Amazing">
     </section>
 
     <!-- Last Section -->
-    <section class="background-image custom-background">
+    <section>
         <div class="flex-row">
-            <div>
+            <div class="text-content">
                 <h1>To Many More Memories</h1>
                 <p>As this little effort from my side comes to an end, I just want to take a moment to wish you a very happy birthday once more! I hope your day is filled with all the love and joy you bring to those around you. You deserve every bit of happiness today and always. I feel so grateful to have you in my life, and I can't wait to create more wonderful memories together in the year ahead. Here's to you and all the amazing things that await you in the coming year. Happy birthday, my sara!</p>
             </div>
-            <img src="images/WhatsApp Image 2025-01-20 at 05.59.36_c952a1c9.jpg" alt="To Many More Memories">
+            <img src="images/WhatsApp Image 2025-01-20 at 05.59.36_c952a1c9.jpg" alt="To Many More Memories" class="single-image">
         </div>
     </section>
 </body>
